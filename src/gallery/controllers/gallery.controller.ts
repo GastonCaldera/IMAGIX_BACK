@@ -1,6 +1,8 @@
 import { Controller, Get, Query, Param } from '@nestjs/common';
 import { GalleryService } from '../services/gallery.service';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Gallery')
 @Controller('gallery')
 export class GalleryController {
   constructor(private galleryService: GalleryService) {}
